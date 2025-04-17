@@ -1,16 +1,16 @@
 import httpx
 import os
-from dotenv import load_dotenv  # Make sure this is imported
+from dotenv import load_dotenv  
 
-# ✅ Load environment variables from .env file
+
 load_dotenv()
 
 RETELL_API_URL = "https://api.retellai.com/agents"
 RETELL_API_KEY = os.getenv("RETELL_API_KEY")
-print(RETELL_API_KEY)  # Should now print your API key
+print(RETELL_API_KEY) 
 
 async def create_agent_retell(data):
-    print(f"Creating agent with data: {data}")  # For debugging purposes
+    print(f"Creating agent with data: {data}")
     payload = {
         "agent_name": data.name,
         "voice_id": data.voice_id,

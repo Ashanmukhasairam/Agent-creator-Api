@@ -7,7 +7,7 @@ load_dotenv()
 
 VAPI_API_URL = "https://api.vapi.ai/assistants"
 VAPI_API_KEY = os.getenv("VAPI_API_KEY")
-print(VAPI_API_KEY)  # Should now print your API key
+print(VAPI_API_KEY) 
 
 async def create_agent_vapi(data):
     payload = {
